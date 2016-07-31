@@ -1,0 +1,9 @@
+﻿<div ng-controller="WorkflowPicker.controller">
+    <select ng-model="workflowpickerArea" ng-change="saveWorkflowPicker()">
+        <option value=""></option>
+        <option ng-repeat="area in areas" value="{{area.Type}}"
+                ng-selected="area.Type == model.value">
+            {{area.Name}} - {{area.Description}}
+        </option>
+    </select>
+</div>

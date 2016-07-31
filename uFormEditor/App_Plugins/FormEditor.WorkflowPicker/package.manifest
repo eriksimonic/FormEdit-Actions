@@ -1,0 +1,38 @@
+﻿{
+    propertyEditors: [
+        {
+        alias: "FormEditor.WorkflowPicker", /*Alias of the datatype*/
+        name: "FormEditor Workflow Picker", /*The name of the datatype*/
+        editor: {
+            view: "~/App_Plugins/FormEditor.WorkflowPicker/WorkflowPicker.html" /*The datatype for viewing Html files*/
+        },
+        /*Here is the value when you create a Datatype*/
+        prevalues: {
+           
+        }
+        }
+    ]
+    ,
+    /*Definition of the required javascript files*/
+    javascript: [
+        '~/App_Plugins/FormEditor.WorkflowPicker/WorkflowPicker.controller.js',
+        '~/App_Plugins/FormEditor.WorkflowPicker/WorkflowPicker.resource.js' 
+    ]
+}
+
+/*
+ fields: [
+                {
+                    label: "FormEditor Workflow Picker", / *Set label* /
+                    description: "Pick from avalable workflows", / *Overview* /
+                    key: "selected", / *Key* /
+                    view: "requiredfield", / *Mandatory parameters* /
+                    validation: [ / *Validation* /
+                        {
+                            type: "Required" 
+                        }                        
+                    ]
+                }
+            ]
+
+*/
