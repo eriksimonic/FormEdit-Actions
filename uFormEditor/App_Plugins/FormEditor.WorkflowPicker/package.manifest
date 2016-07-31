@@ -2,7 +2,7 @@
     propertyEditors: [
         {
         alias: "FormEditor.WorkflowPicker", /*Alias of the datatype*/
-        name: "FormEditor Workflow Picker", /*The name of the datatype*/
+        name: "Form Editor - Workflow Picker", /*The name of the datatype*/
         editor: {
             view: "~/App_Plugins/FormEditor.WorkflowPicker/WorkflowPicker.html" /*The datatype for viewing Html files*/
         },
