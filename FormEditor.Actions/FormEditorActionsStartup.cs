@@ -23,26 +23,30 @@ namespace FormEditor.Actions
         {
             if (e.Content.HasProperty(WORKFLOW) && null != e.Content.GetPropertyValue<string>(WORKFLOW))
             {
-                ExecuteAction(sender, e.Content, e);
+                ExecuteAction(sender, e.Content, e, e.Content.GetPropertyValue<string>(WORKFLOW));
             }
         }
         private void FormModelOnAfterAddToIndex(FormModel sender, FormEditorEventArgs e)
         {
             if (e.Content.HasProperty(WORKFLOW) && null != e.Content.GetPropertyValue<string>(WORKFLOW))
             {
-                ExecuteAction(sender, e.Content, e);
+                ExecuteAction(sender, e.Content, e, e.Content.GetPropertyValue<string>(WORKFLOW));
             }
         }
-        private void ExecuteAction(FormModel sender, IPublishedContent requestedContent, FormEditorCancelEventArgs formEditorCancelEventArgs)
+        private IFormEditorAction CreateWorkflowInstance(string asm)
         {
-
-            IFormEditorAction actions = (IFormEditorAction)Activator.CreateInstance(Type.GetType(requestedContent.GetPropertyValue<string>(WORKFLOW)));
-            actions.ExecuteBefore(sender, requestedContent, formEditorCancelEventArgs);
+            var type = Type.GetType(asm);
+            return (IFormEditorAction)Activator.CreateInstance(type);
+            //IFormEditorAction actions = (IFormEditorAction)Activator.CreateInstance(asm[0], asm[1]);
         }
-        private void ExecuteAction(FormModel sender, IPublishedContent requestedContent, FormEditorEventArgs e)
+
+        private void ExecuteAction(FormModel sender, IPublishedContent requestedContent, FormEditorCancelEventArgs formEditorCancelEventArgs, string workflow)
         {
-            IFormEditorAction actions = (IFormEditorAction)Activator.CreateInstance(Type.GetType(requestedContent.GetPropertyValue<string>(WORKFLOW)));
-            actions.ExecuteAfter(sender, requestedContent , e);
+              CreateWorkflowInstance(workflow).ExecuteBefore(sender, requestedContent, formEditorCancelEventArgs);
+        }
+        private void ExecuteAction(FormModel sender, IPublishedContent requestedContent, FormEditorEventArgs e, string workflow)
+        {
+            CreateWorkflowInstance(workflow).ExecuteAfter(sender, requestedContent , e);
         }
     }
 

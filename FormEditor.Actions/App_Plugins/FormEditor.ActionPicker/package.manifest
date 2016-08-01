@@ -4,7 +4,7 @@
         alias: "FormEditor.ActionsPicker", /*Alias of the datatype*/
         name: "Form Editor - Actions Picker", /*The name of the datatype*/
         editor: {
-            view: "~/App_Plugins/FormEditor.ActionsPicker/ActionsPicker.html" /*The datatype for viewing Html files*/
+            view: "~/App_Plugins/FormEditor.ActionPicker/ActionPicker.html" /*The datatype for viewing Html files*/
         },
         /*Here is the value when you create a Datatype*/
         prevalues: {
@@ -15,8 +15,8 @@
     ,
     /*Definition of the required javascript files*/
     javascript: [
-        '~/App_Plugins/FormEditor.ActionsPicker/ActionsPicker.controller.js',
-        '~/App_Plugins/FormEditor.ActionsPicker/ActionsPicker.resource.js' 
+        '~/App_Plugins/FormEditor.ActionPicker/ActionPicker.controller.js',
+        '~/App_Plugins/FormEditor.ActionPicker/ActionPicker.resource.js' 
     ]
 }
 

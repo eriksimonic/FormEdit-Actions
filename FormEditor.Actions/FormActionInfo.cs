@@ -14,7 +14,7 @@ namespace FormEditor.Actions
             {
                 Description = wrkf.Description,
                 Name = wrkf.Name,
-                Type = type.FullName
+                Type = type.AssemblyQualifiedName
             };
         }
 
