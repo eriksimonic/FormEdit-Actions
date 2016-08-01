@@ -7,7 +7,7 @@
     <owners>Erik Simonič</owners>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <projectUrl>https://github.com/eriksimonic/FormEdit-Actions</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/kjac/FormEditor/master/Docs/img/logo.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/eriksimonic/FormEdit-Actions/master/imgs/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Extends the Umbraco FormEdit to have an option to run custom actions</description>
     <tags>FormEdit action workflow umbraco</tags>
