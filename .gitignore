@@ -291,3 +291,7 @@ uFormEditor/scripts/ai.0.15.0-build58334.js
 uFormEditor/scripts/ai.0.15.0-build58334.min.js
 uFormEditor/scripts/fanoe.js
 uFormEditor/uFormEditor.csproj
+FormEditor.Actions/bin/
+FormEditor.Actions/App_Data/
+FormEditor.Actions/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+FormEditor.Actions/obj/

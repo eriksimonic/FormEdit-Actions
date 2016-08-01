@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Web;
 
-namespace uFormEditor
+namespace FormEditor.Actions
 {
     public static class Extensions
     {
@@ -28,6 +28,20 @@ namespace uFormEditor
             return asm.GetLoadableTypes().Where(x => it.IsAssignableFrom(x) && x.IsClass);
         }
 
+        public static T GetPostedValue<T>(this IEnumerable<FormEditor.Fields.FieldWithValue> cnt, string key)
+        {
+            var value = cnt.SingleOrDefault(x => x.Name.Equals(key, StringComparison.CurrentCultureIgnoreCase));
+
+            if (null != value)
+                return (T)Convert.ChangeType((object)value.SubmittedValue, typeof(T));
+
+            return default(T);
+        }
+
+        //public static byte[] GetPostedGileBytes(this IEnumerable<FormEditor.Fields.FieldWithValue> cnt, string key)
+        //{
+                
+        //}
 
     }
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>FormEdit.Actions</id>
+    <version>1.0</version>
+    <authors>Erik Simonič</authors>
+    <owners>Erik Simonič</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/eriksimonic/FormEdit-Actions</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/kjac/FormEditor/master/Docs/img/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Extends the Umbraco FormEdit to have an option to run custom actions</description>
+    <tags>FormEdit action workflow umbraco</tags>
+    <dependencies>
+      <dependency id="FormEdit" version="0.14.0.4" />
+      <dependency id="UmbracoCms.Core" version="7.3.0" />
+    </dependencies>
+  </metadata>
+  <files>
+
+    <file src="bin\Release\FormEditor.Actions.dll" target="bin" />
+    <file src="bin\Release\FormEditor.Actions.pdb" target="bin"/>
+    <file src="App_Plugins\FormEditor.ActionPicker\*.*" target="App_Plugins\FormEditor.ActionPicker" />
+    
+  </files>
+
+</package>

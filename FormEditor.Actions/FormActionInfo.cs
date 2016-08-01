@@ -1,16 +1,16 @@
 ﻿using System;
 
-namespace uFormEditor.App_Code
+namespace FormEditor.Actions
 {
-    public class FormWorkflowInfo
+    public class FormActionInfo
     {
-        public FormWorkflowInfo()
+        public FormActionInfo()
         {
         }
-        public static FormWorkflowInfo CreateFromType(Type type)
+        public static FormActionInfo CreateFromType(Type type)
         {
-            var wrkf = Activator.CreateInstance(type) as IFormEditorWorkflow;
-            return new FormWorkflowInfo
+            var wrkf = Activator.CreateInstance(type) as IFormEditorAction;
+            return new FormActionInfo
             {
                 Description = wrkf.Description,
                 Name = wrkf.Name,
